@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="343.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.femass.gui.LivroController">
+   <children>
+      <ListView fx:id="LstLivros" layoutX="35.0" layoutY="23.0" onKeyPressed="#LstLivros_KeyPressed" onMousePressed="#LstLivros_MouseClicked" prefHeight="293.0" prefWidth="200.0" />
+      <Label layoutX="244.0" layoutY="26.0" prefHeight="20.0" prefWidth="61.0" text="Código:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="254.0" layoutY="63.0" prefHeight="17.0" prefWidth="41.0" text="Título:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="254.0" layoutY="97.0" prefHeight="17.0" prefWidth="41.0" text="Autor:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="260.0" layoutY="130.0" text="Ano:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TxtCodigo" disable="true" layoutX="299.0" layoutY="23.0" prefHeight="25.0" prefWidth="162.0" />
+      <TextField fx:id="TxtTitulo" disable="true" layoutX="299.0" layoutY="60.0" prefHeight="25.0" prefWidth="283.0" />
+      <TextField fx:id="TxtAno" disable="true" layoutX="300.0" layoutY="127.0" prefHeight="25.0" prefWidth="61.0" />
+      <Button fx:id="BntIncluir" layoutX="281.0" layoutY="285.0" mnemonicParsing="false" onAction="#incluir_click" prefHeight="25.0" prefWidth="51.0" text="Inlcuir" />
+      <Button fx:id="BntAlterar" layoutX="350.0" layoutY="285.0" mnemonicParsing="false" onAction="#alterar_click" text="Alterar" />
+      <Button fx:id="BntExcluir" layoutX="416.0" layoutY="285.0" mnemonicParsing="false" onAction="#excluir_click" prefHeight="25.0" prefWidth="51.0" text="Excluir" />
+      <Button fx:id="BntGravar" disable="true" layoutX="299.0" layoutY="170.0" mnemonicParsing="false" onAction="#gravar_click" text="Gravar" />
+      <ComboBox fx:id="CboAutor" disable="true" layoutX="299.0" layoutY="95.0" prefHeight="25.0" prefWidth="238.0" />
+   </children>
+</Pane>

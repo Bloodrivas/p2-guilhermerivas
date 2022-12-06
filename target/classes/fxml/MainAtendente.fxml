@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.femass.gui.MainAtendenteController">
+   <children>
+      <Label layoutX="24.0" layoutY="37.0" text="MENU DE ATENDENTE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="BtnProfessor" layoutX="114.0" layoutY="198.0" mnemonicParsing="false" onAction="#professor_click" text="Professor">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Button>
+      <Button fx:id="BtnAluno" layoutX="139.0" layoutY="112.0" mnemonicParsing="false" onAction="#aluno_click" text="Aluno">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Button>
+      <Button fx:id="BtnEmprestimo" layoutX="97.0" layoutY="377.0" mnemonicParsing="false" onAction="#emprestimo_click" text="Empréstimo">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Button>
+      <Button fx:id="BtnDevolucao" layoutX="105.0" layoutY="287.0" mnemonicParsing="false" onAction="#devolucao_click" text="Devolução">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
