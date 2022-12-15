@@ -12,12 +12,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class MainBibliotecarioController implements Initializable {
-    @FXML
-    private Button BtnLivro;
-    @FXML
-    private Button BtnAutor;
-    @FXML
-    private Button BtnExemplar;
+  
 
     @FXML
     private void autores_click(ActionEvent event) {

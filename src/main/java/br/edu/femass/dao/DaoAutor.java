@@ -10,6 +10,6 @@ public class DaoAutor extends Dao<Autor> {
     }
 
     public List<Autor> buscarTodosPorId() {
-        return em.createQuery("select c from Cliente c order by c.id").getResultList();
+        return em.createQuery("select c from Autor c order by c.Id").getResultList();
     }
 }

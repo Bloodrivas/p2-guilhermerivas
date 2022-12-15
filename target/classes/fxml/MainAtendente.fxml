@@ -5,32 +5,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.femass.gui.MainAtendenteController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.femass.gui.MainAtendenteController">
    <children>
       <Label layoutX="24.0" layoutY="37.0" text="MENU DE ATENDENTE">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="BtnProfessor" layoutX="114.0" layoutY="198.0" mnemonicParsing="false" onAction="#professor_click" text="Professor">
-         <font>
-            <Font size="33.0" />
-         </font>
-      </Button>
-      <Button fx:id="BtnAluno" layoutX="139.0" layoutY="112.0" mnemonicParsing="false" onAction="#aluno_click" text="Aluno" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
-         <font>
-            <Font size="33.0" />
-         </font>
-      </Button>
-      <Button fx:id="BtnEmprestimo" layoutX="97.0" layoutY="377.0" mnemonicParsing="false" onAction="#emprestimo_click" text="Empréstimo">
-         <font>
-            <Font size="33.0" />
-         </font>
-      </Button>
-      <Button fx:id="BtnDevolucao" layoutX="105.0" layoutY="287.0" mnemonicParsing="false" onAction="#devolucao_click" text="Devolução">
-         <font>
-            <Font size="33.0" />
-         </font>
-      </Button>
+      <Button fx:id="BtnAluno" layoutX="121.0" layoutY="136.0" mnemonicParsing="false" onAction="#aluno_click" prefHeight="25.0" prefWidth="165.0" text="Aluno" />
+      <Button fx:id="BtnProfessor" layoutX="124.0" layoutY="210.0" mnemonicParsing="false" onAction="#professor_click" prefHeight="25.0" prefWidth="165.0" text="Professor" />
+      <Button fx:id="BtnEmprestimo" layoutX="124.0" layoutY="283.0" mnemonicParsing="false" onAction="#emprestimo_click" prefHeight="25.0" prefWidth="165.0" text="Empréstimo" />
    </children>
 </Pane>

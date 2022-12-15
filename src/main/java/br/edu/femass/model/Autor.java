@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import br.edu.femass.dao.DaoAutor;
+
 @Entity
 public class Autor {
     @Id
@@ -51,9 +53,7 @@ public class Autor {
 
     @Override
     public String toString() {
-        return "Autor [nome=" + nome + 
-        ", sobrenome=" + sobrenome + 
-        ", nacionalidade=" + nacionalidade + "]";
+        return nome + " " + sobrenome;
     }
 
     public Long getId() {
@@ -67,4 +67,9 @@ public class Autor {
     public void setAutor(Autor selectedItem) {
     }
     
+    public static void main(String[] args) {
+        Autor autor = new Autor("Davi", "Trajano", "Brasil");
+        DaoAutor daoAutor = new DaoAutor();
+        daoAutor.inserir(autor);
+    }
 }

@@ -12,17 +12,17 @@
             <Font size="48.0" />
          </font>
       </Label>
-      <Button fx:id="BtnLivro" layoutX="28.0" layoutY="163.0" mnemonicParsing="false" onAction="#livro_click" prefHeight="44.0" prefWidth="172.0" text="Livros">
+      <Button layoutX="28.0" layoutY="163.0" mnemonicParsing="false" onAction="#livro_click" prefHeight="44.0" prefWidth="172.0" text="Livros">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="BtnAutor" layoutX="218.0" layoutY="163.0" mnemonicParsing="false" onAction="#autores_click" prefHeight="44.0" prefWidth="172.0" text="Autores">
+      <Button layoutX="218.0" layoutY="163.0" mnemonicParsing="false" onAction="#autores_click" prefHeight="44.0" prefWidth="172.0" text="Autores">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="BtnExemplar" layoutX="404.0" layoutY="163.0" mnemonicParsing="false" onAction="#exemplares_click" prefHeight="44.0" prefWidth="172.0" text="Exemplares">
+      <Button layoutX="404.0" layoutY="163.0" mnemonicParsing="false" onAction="#exemplares_click" prefHeight="44.0" prefWidth="172.0" text="Exemplares">
          <font>
             <Font size="14.0" />
          </font>

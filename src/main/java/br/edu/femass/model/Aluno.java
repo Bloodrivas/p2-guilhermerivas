@@ -1,19 +1,11 @@
 package br.edu.femass.model;
-
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 @Entity
 public class Aluno extends Leitor{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    private Long Id;
     private String matricula;
     
-    public Aluno(String matricula) {
+    public Aluno() {
         this.setPrazoMaximoDevolucao(15);
     }
 
@@ -33,11 +25,7 @@ public class Aluno extends Leitor{
 
     @Override
     public String toString() {
-        return "Aluno [matricula=" + matricula + "]";
-    }
-
-    public void setId(Long id) {
-        Id = id;
+        return this.getNome() +" - "+ matricula;
     }
 
 }

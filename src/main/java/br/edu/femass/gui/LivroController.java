@@ -46,7 +46,7 @@ public class LivroController implements Initializable {
     @FXML 
     private ListView<Livro> LstLivros;
 
-    private DaoLivro dao = new DaoLivro();
+    private DaoLivro daoLivro = new DaoLivro();
 
     private DaoAutor daoautor = new DaoAutor();
 
@@ -54,25 +54,18 @@ public class LivroController implements Initializable {
 
     private Autor autor;
 
-    
     private boolean incluindo;
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        preencherLista();
-    } 
 
     @FXML
     private void gravar_click(ActionEvent event){
-	    //livro.setCodigo(TxtCodigo.getText());
 	    livro.setAutor(CboAutor.getSelectionModel().getSelectedItem());
         livro.setTitulo(TxtTitulo.getText());
         livro.setAno(TxtAno.getText());
 		
 	    if(incluindo){
-		    dao.inserir(livro);
+		    daoLivro.inserir(livro);
 	    } else{
-		    dao.alterar(livro);
+		    daoLivro.alterar(livro);
 	    }
 	
 	    preencherLista();
@@ -99,7 +92,7 @@ public class LivroController implements Initializable {
 
     @FXML
     private void excluir_click(ActionEvent event){
-	    dao.apagar(livro);
+	    daoLivro.apagar(livro);
 	    preencherLista();
     }
 
@@ -136,10 +129,11 @@ public class LivroController implements Initializable {
 
 
     private void preencherLista(){
-	    List<Livro> livros = dao.buscarTodos();
+	    List<Livro> livros = daoLivro.buscarTodos();
 	
 	    ObservableList<Livro> data = FXCollections.observableArrayList(livro);
 	    LstLivros.setItems(data);
+        LstLivros.refresh();
     }
     
     private void preencherCombo() {
@@ -147,7 +141,13 @@ public class LivroController implements Initializable {
 
         ObservableList<Autor> data = FXCollections.observableArrayList(autores);
         CboAutor.setItems(data);
-    }   
+    } 
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        preencherLista();
+        preencherCombo();
+    } 
 
        
 }

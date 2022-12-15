@@ -10,8 +10,8 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="369.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.femass.gui.ExemplarController">
    <children>
-      <ComboBox fx:id="CboAutor" layoutX="105.0" layoutY="25.0" prefHeight="28.0" prefWidth="297.0" />
-      <Label layoutX="27.0" layoutY="26.0" text="Autores:">
+      <ComboBox fx:id="CboLivro" layoutX="132.0" layoutY="26.0" prefHeight="28.0" prefWidth="297.0" />
+      <Label layoutX="27.0" layoutY="26.0" text="Exemplares:">
          <font>
             <Font size="19.0" />
          </font>
@@ -19,24 +19,16 @@
       <TableView fx:id="tabela" layoutX="27.0" layoutY="126.0" prefHeight="218.0" prefWidth="618.0">
         <columns>
           <TableColumn fx:id="colID" prefWidth="111.0" text="ID" />
-          <TableColumn fx:id="colTitulo" prefWidth="297.0" text="Título" />
-            <TableColumn fx:id="ColData" prefWidth="209.0" text="Data" />
+          <TableColumn fx:id="colTitulo" prefWidth="292.0" text="Título" />
+            <TableColumn fx:id="ColData" prefWidth="214.0" text="Data" />
         </columns>
       </TableView>
-      <Button fx:id="BtnIncluir" layoutX="125.0" layoutY="70.0" mnemonicParsing="false" onAction="#incluir_click" text="Incluir">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Button fx:id="BtnExcluir" layoutX="231.0" layoutY="70.0" mnemonicParsing="false" onAction="#excluir_click" text="Excluir">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
       <Button fx:id="BtnGravar" layoutX="456.0" layoutY="20.0" mnemonicParsing="false" onAction="#gravar_click" prefHeight="34.0" prefWidth="135.0" text="Gravar">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
+      <Button fx:id="BtnExcluir" layoutX="309.0" layoutY="77.0" mnemonicParsing="false" onAction="#excluir_click" prefHeight="25.0" prefWidth="99.0" text="Excluir" />
+      <Button fx:id="BtnIncluir" layoutX="182.0" layoutY="77.0" mnemonicParsing="false" onAction="#incluir_click" prefHeight="25.0" prefWidth="99.0" text="Incluir" />
    </children>
 </Pane>

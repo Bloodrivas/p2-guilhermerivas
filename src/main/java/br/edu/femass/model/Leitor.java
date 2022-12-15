@@ -11,9 +11,8 @@ import javax.persistence.GenerationType;
 public class Leitor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long Id;
-    private static Long codigo;
+    
     private String nome;
     private String endereco;
     private String telefone;
@@ -27,14 +26,6 @@ public class Leitor {
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
-    }
-
-    public static Long getCodigo() {
-        return codigo;
-    }
-
-    public static void setCodigo(Long codigo) {
-        Leitor.codigo = codigo;
     }
 
     public String getNome() {

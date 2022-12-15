@@ -11,15 +11,12 @@ public class Livro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
-    private Long codigo;
     private String titulo;
 
     @ManyToOne(cascade = CascadeType.ALL)
     private Autor autor;
-
-    
-    private String ano;
-    
+  
+    private String ano;    
 
     public Livro(){
 
@@ -29,14 +26,6 @@ public class Livro {
         this.titulo = titulo;
         this.autor = autor;
         this.ano = ano;
-    }
-
-    public Long getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(Long codigo) {
-        this.codigo = codigo;
     }
 
     public String getTitulo() {
@@ -65,10 +54,7 @@ public class Livro {
 
     @Override
     public String toString() {
-        return "Livro [codigo=" + codigo + 
-        ", titulo=" + titulo + 
-        ", autor=" + autor + 
-        ", ano=" + ano + "]";
+        return titulo + " - " + autor;
     }
 
     public Long getId() {

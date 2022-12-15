@@ -6,6 +6,6 @@ public class DaoEmprestimo extends Dao<Emprestimo> {
     
 
     public List<Emprestimo> buscarTodos(){
-        return em.createQuery("select e from Emprestimo a order by a.nome").getResultList();
+        return em.createQuery("select a from Emprestimo a order by a.Id").getResultList();
     }
 }

@@ -6,6 +6,10 @@ public class DaoExemplar extends Dao<Exemplar> {
     
 
     public List<Exemplar> buscarTodos(){
-        return em.createQuery("select e from Exemplar a order by a.nome").getResultList();
+        return em.createQuery("select a from Exemplar a order by a.Id").getResultList();
+    }
+
+    public List<Exemplar> buscarTodosPorId() {
+        return em.createQuery("select a from Exemplar a order by a.Id").getResultList();
     }
 }

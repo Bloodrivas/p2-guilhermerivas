@@ -8,33 +8,25 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 @Entity
-public class Exemplar extends Livro {
+public class Exemplar {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long Id;
-    private Long codigo;
     private LocalDate dataAquisicao;
+
+    private String titulo;
 
     @ManyToOne(cascade = CascadeType.ALL)
     private Livro livro;    
 
     public Exemplar(){
         this.dataAquisicao = LocalDate.now();
+
     }
 
-    public Exemplar(Long codigo, LocalDate dataAquisicao, Livro livro) {
-        this.codigo = codigo;
+    public Exemplar(Long Id, LocalDate dataAquisicao, Livro livro) {
         this.dataAquisicao = dataAquisicao;
         this.livro = livro;
-    }
-
-    public Long getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(Long codigo) {
-        this.codigo = codigo;
     }
 
     public LocalDate getDataAquisicao() {
@@ -49,14 +41,29 @@ public class Exemplar extends Livro {
         return livro;
     }
 
+    public Long getId() {
+        return Id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setId(Long id) {
+        Id = id;
+    }
+
     public void setLivro(Livro livro) {
         this.livro = livro;
     }
 
     @Override
     public String toString() {
-        return "Exemplar [codigo=" + codigo + 
-        ", dataAquisicao=" + dataAquisicao + "]";
+        return Id + " " + livro;
     }
 
 }

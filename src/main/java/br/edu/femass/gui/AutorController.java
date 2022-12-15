@@ -85,6 +85,8 @@ public class AutorController implements Initializable {
 	    incluindo = true;
 	    autor = new Autor();
 	    TxtNome.setText("");
+        TxtSobrenome.setText("");
+        TxtNacionalidade.setText("");
 	    TxtNome.requestFocus();
     }
 
@@ -126,6 +128,7 @@ public class AutorController implements Initializable {
 
         ObservableList<Autor> data = FXCollections.observableArrayList(autores);
         tabela.setItems(data);
+        tabela.refresh();
     }    
 
     

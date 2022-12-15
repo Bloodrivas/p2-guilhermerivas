@@ -86,9 +86,9 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-        <Label alignment="CENTER" layoutX="122.0" layoutY="14.0" prefHeight="99.0" prefWidth="396.0" style="&#10;" text="MENU PRINCIPAL" textAlignment="CENTER" textFill="#0a0a0a" wrapText="false">
+        <Label alignment="CENTER" contentDisplay="TOP" layoutX="122.0" layoutY="14.0" prefHeight="99.0" prefWidth="396.0" style="&#10;" text="MENU PRINCIPAL" textAlignment="CENTER" textFill="#0a0a0a" underline="true" wrapText="false">
           <font>
-            <Font size="48.0" />
+            <Font name="Century" size="48.0" />
           </font>
                <effect>
                   <Bloom />
